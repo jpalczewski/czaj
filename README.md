@@ -2,21 +2,7 @@
 
 > Tea managment system.
 
-## Build Setup
+## What it is all about?
 
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Nothing, yet. Just another weird side-project and motivation to meet with typescrypt&nuxt&etc.
+In future it might be a nice looking wrapper that manages and helps im printing labels with ql700. A 2020 glabel alternative.
