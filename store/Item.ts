@@ -5,8 +5,7 @@ import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
   stateFactory: true,
   namespaced: true,
 })
-
-export  default  class Item extends  VuexModule {
+export default class Item extends  VuexModule {
   name = 'Item name'
   description = 'Item description'
 
