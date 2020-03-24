@@ -1,4 +1,4 @@
-import { IItem } from '../store/types'
+import { IItem } from '~/store/types'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import ItemStore from '../store/items'
@@ -22,7 +22,7 @@ describe('ItemStore', () => {
       description: 'Test', id: 'Test', name: 'asd', timeCreated: new Date
     }
     service.addItem(item)
-    expect(service).toBeInstanceOf(Object)
+    expect(service.items[0]).toBe(item)
     done()
   })
 })

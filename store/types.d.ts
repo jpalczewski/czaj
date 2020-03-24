@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export interface IItemStore {
   items: IItem[]
   getItems : () => Promise<IItem[]>

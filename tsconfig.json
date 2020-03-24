@@ -14,6 +14,8 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "inlineSourceMap": true,
+
     "baseUrl": ".",
     "paths": {
       "~/*": [

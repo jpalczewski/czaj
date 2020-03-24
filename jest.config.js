@@ -18,6 +18,9 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
-  ]
+    '<rootDir>/pages/**/*.vue',
+    '<rootDir>/store/*.ts',
+    '!<rootDir>/store/index.ts'
+  ],
+  coveragePathIgnorePatterns: ['.d.ts', ]
 }
