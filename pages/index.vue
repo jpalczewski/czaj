@@ -7,9 +7,17 @@
 </template>
 
 <script lang="ts">
-import { itemStore } from '~/utils/store-accessor'
-export default {
-  name: 'czaj',
+import { getModule } from 'vuex-module-decorators'
+import { itemStore } from '../store/index'
+import {
+  Component,
+  Vue
+} from "nuxt-property-decorator"
+import { IItemStore } from 'store/types'
+
+export default class extends Vue {
+  name: string = 'czaj';
+  ds: IItemStore = itemStore;
 
 
 }

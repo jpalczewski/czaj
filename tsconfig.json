@@ -13,13 +13,14 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
+
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "inlineSourceMap": true,
 
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "./*"
+        "./*", "./*.d"
       ],
       "@/*": [
         "./*"
@@ -34,6 +35,7 @@
   "exclude": [
     "node_modules",
     ".nuxt",
-    "dist"
+    "dist",
+    "**/*.d.ts"
   ]
 }
