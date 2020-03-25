@@ -23,7 +23,6 @@ import { IItemStore } from 'store/types'
      ItemAdd
    }
 })
-
 export default class extends Vue {
   name: string = 'czaj';
   ds: IItemStore = itemStore;
