@@ -16,7 +16,8 @@
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "vuex-module-decorators": "^0.16.1",
-    "nuxt-property-decorator": "latest"
+    "nuxt-property-decorator": "latest",
+    "vuex-class": "latest"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
