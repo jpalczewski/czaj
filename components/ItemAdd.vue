@@ -25,7 +25,7 @@
 
     get item(): IItem {
       return {
-        id: '', timeCreated: new Date,
+        id: '1', timeCreated: new Date,
         name: this.name,
         description: this.description
       }

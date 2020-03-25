@@ -1,7 +1,7 @@
 <template>
-<section>
-  <p v-for="item in items" :key="item.name">
-    <strong>{{item.name}}</strong> - <i>{{item.description}}</i>
+<section class="container">
+  <p v-for="item in items" :key="item.name" class="notification" >
+    <strong>{{item.name}}</strong> - <i>{{item.description}}</i> <nuxt-link :to="printUrl(item.id)"> test</nuxt-link>
   </p>
 </section>
 </template>
@@ -19,6 +19,11 @@
         console.log(this)
        return this.ds ? this.ds.items : []
     }
+
+     printUrl(str : string) : string {
+        return "/print/" + str;
+    }
+
   }
 </script>
 
