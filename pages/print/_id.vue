@@ -10,9 +10,7 @@
     Vue
   } from "nuxt-property-decorator"
 
-  @Component({
-      layout:"printable"
-  })
+  @Component
   export default class extends Vue {
 
     get layout() : string {
