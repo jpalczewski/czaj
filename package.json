@@ -15,8 +15,8 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "nuxt": "^2.12.1",
     "nuxt-buefy": "^0.3.2",
-    "vuex-module-decorators": "^0.16.1",
-    "nuxt-property-decorator": "latest"
+    "nuxt-property-decorator": "latest",
+    "vuex-module-decorators": "^0.16.1"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
@@ -26,7 +26,11 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
+    "pug": "2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2",
     "ts-jest": "^25.2.1",
     "vue-jest": "^4.0.0-0"
   }
