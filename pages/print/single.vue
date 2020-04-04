@@ -1,9 +1,13 @@
 <template>
   <div id="sheet">
-    <!--    <p class="title">{{this.$route.params.id }}</p>-->
-    <p class="title">Disgustingly long sample text</p>
-    <p class="subtitle">Awkwardly bottom text</p>
-    <a id="back">Back</a>
+    <!--    <p class="title"></p>-->
+    <p class="title" v-bind:class="{'is-size-6': isSmall}">{{this.$route.params.item.name}}</p>
+    <p class="subtitle" v-bind:class="{'is-size-6':  isSmall}">{{this.$route.params.item.description}}</p>
+    <div class="field" id="back" >
+      <label for="setSmall">Force smaller size</label>
+      <input id="setSmall" type="checkbox" v-model="small">
+      <nuxt-link  to="/">Back</nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -13,9 +17,16 @@
   @Component
   export default class extends Vue {
 
+     small: Boolean = false
+
     get layout(): string {
       return 'printable'
     }
+
+    get isSmall() {
+      return this.small
+    }
+
   }
 </script>
 
