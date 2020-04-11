@@ -29,7 +29,7 @@
 
     get item(): IItem {
       return {
-        id:  uniqueId(), timeCreated: new Date,
+        id:  this.$uuid.v4() , timeCreated: new Date,
         name: this.name,
         description: this.description
       }
