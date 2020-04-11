@@ -1,3 +1,4 @@
+import webpack from 'webpack'
 
 export default {
   mode: 'spa',
@@ -39,7 +40,6 @@ export default {
   */
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/localforage',
   ],
   /*
   ** Nuxt.js modules
@@ -58,6 +58,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     // global modules
+    //     '_': 'lodash'
+    //   })
+    // ]
+
   }
 }

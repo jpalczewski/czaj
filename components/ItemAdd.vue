@@ -1,10 +1,13 @@
 <template>
-  <section>
-    <label for="name">Nazwa</label>
-    <input id="name" type="text" v-model="name"/>
-    <label for="descr">Opis</label>
-    <input id="descr" type="text" v-model="description"/>
-    <button @click="add"  >dodaj</button>
+  <section class="container column">
+
+    <b-field label="Name">
+      <b-input v-model="name"></b-input>
+    </b-field>
+    <b-field label="Description">
+      <b-input v-model="description"></b-input>
+    </b-field>
+    <b-button @click="add">Add</b-button>
   </section>
 </template>
 
@@ -14,7 +17,8 @@
     Prop,
     Vue
   } from "nuxt-property-decorator"
-  import { IItem, IItemStore } from '../store/types'
+  import { IItem, IItemStore } from '~/store/types'
+  import { uniqueId } from 'lodash'
 
   @Component
   export default class extends Vue {
@@ -25,7 +29,7 @@
 
     get item(): IItem {
       return {
-        id: '1', timeCreated: new Date,
+        id:  uniqueId(), timeCreated: new Date,
         name: this.name,
         description: this.description
       }
