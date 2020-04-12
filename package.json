@@ -1,6 +1,6 @@
 {
   "name": "czaj",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "description": "Tea management system.",
   "author": "Jacek Palczewski",
   "private": true,
@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "release": "standard-version"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.0",
@@ -40,9 +40,13 @@
     "pug": "2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
-    "standard-version": "^7.1.0",
+    "semantic-release": "^17.0.4",
     "ts-jest": "^25.2.1",
     "vue-jest": "^4.0.0-0",
     "vue-uuid": "^1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpalczewski/czaj.git"
   }
 }
