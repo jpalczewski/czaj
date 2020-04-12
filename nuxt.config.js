@@ -1,3 +1,6 @@
+import webpack from 'webpack'
+
+const {gitDescribe, gitDescribeSync} = require('git-describe');
 
 export default {
   mode: 'spa',
@@ -32,14 +35,17 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vuex-persist', ssr: false}
+    { src: '~/plugins/vuex-persist', ssr: false},
+    { src: '~/plugins/vue-uuid', ssr: false}
   ],
+  env:  {
+    version: gitDescribeSync().hash
+  },
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/localforage',
   ],
   /*
   ** Nuxt.js modules
@@ -58,6 +64,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    plugins: [
+      // new webpack.ProvidePlugin({
+      //   // global modules
+      //   'commithash': 'git-revision-webpack-plugin'
+      // })
+    ]
+
   }
 }

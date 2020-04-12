@@ -9,13 +9,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest"
+    "test": "jest",
+    "release": "standard-version"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.0",
+    "@types/uuid": "^7.0.2",
+    "buefy": "^0.8.15",
+    "bulma": "^0.8.2",
     "mode-sass": "^1.0.0",
     "nuxt": "2.12.2",
-    "nuxt-buefy": "^0.3.2",
+    "nuxt-buefy": "^0.3.26",
     "nuxt-property-decorator": "latest",
     "vuex-module-decorators": "^0.16.1",
     "vuex-persist": "^2.2.0"
@@ -23,17 +27,22 @@
   "devDependencies": {
     "@nuxt/typescript-build": "0.6.4",
     "@types/jest": "25.2.1",
+    "@types/lodash": "^4.14.149",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^25.2.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "git-describe": "^4.0.4",
     "jest": "^25.1.0",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "pug": "2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
+    "standard-version": "^7.1.0",
     "ts-jest": "^25.2.1",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.0-0",
+    "vue-uuid": "^1.1.1"
   }
 }

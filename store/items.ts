@@ -13,6 +13,8 @@ export default class ItemStore extends VuexModule implements IItemStore {
   async addItem(item: IItem) {
     this.items.push(item)
   }
+
+
   @Action
   async getItems(): Promise<IItem[]> {
     return  this.items

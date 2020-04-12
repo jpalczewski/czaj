@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
+  <section class="container column">
     <p :key="item.name" class="notification" v-for="item in items">
-      <strong>{{item.name}}</strong> - <i>{{item.description}}</i>
+      <strong>{{item.id}}.{{item.name}}</strong> - <i>{{item.description}}</i>
       <nuxt-link :to="{name: 'print-single', params: {item : item}}">Print</nuxt-link>
     </p>
   </section>

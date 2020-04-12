@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
+    <div class="columns">
       <ItemList :ds="ds"/>
       <ItemAdd :ds="ds"/>
     </div>
