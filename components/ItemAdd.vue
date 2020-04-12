@@ -29,6 +29,7 @@
 
     get item(): IItem {
       return {
+        // @ts-ignore
         id:  this.$uuid.v4() , timeCreated: new Date,
         name: this.name,
         description: this.description

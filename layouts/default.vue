@@ -49,6 +49,13 @@
         <nuxt />
       </div>
     </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          czaj - tea managment system, version: {{ version }}
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -67,7 +74,8 @@ export default {
           icon: 'lightbulb',
           to: { name: 'inspire' }
         }
-      ]
+      ],
+      version:  process.env.version
     }
   }
 }
