@@ -1,6 +1,6 @@
 {
   "name": "czaj",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "Tea management system.",
   "author": "Jacek Palczewski",
   "private": true,
@@ -48,5 +48,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jpalczewski/czaj.git"
+  },
+  "release": {
+    "branches": [
+      "develop",
+      "master"
+    ],
+    "ci": false
   }
 }
