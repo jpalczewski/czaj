@@ -1,11 +1,11 @@
 <template>
   <section class="container column">
-    <p class="notification" v-for="item in items" :key="item.id">
-      <span class="is-left" id="des">
+    <div class="notification" v-for="item in items" :key="item.id">
+      <div class="is-left" id="des">
         <strong>{{item.id}}.{{item.name}}</strong> - <i>{{item.description}}</i>
-      </span>
+      </div>
 
-      <span class="is-right" id="buttons">
+      <div class="is-right" id="buttons">
         <nuxt-link :to="{name: 'print-single', params: {item : item}}">
           <button class="button">
           <b-icon icon="printer"></b-icon>
@@ -14,8 +14,8 @@
         <button class="button" @click="removeByUUID(item.id)">
         <b-icon icon="delete"></b-icon>
       </button>
-      </span>
-    </p>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -47,6 +47,6 @@
 
 <style lang="scss" scoped>
   #buttons {
-    float: right;
+    text-align: right;
   }
 </style>
