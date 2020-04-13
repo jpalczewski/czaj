@@ -1,6 +1,6 @@
 {
   "name": "czaj",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tea management system.",
   "author": "Jacek Palczewski",
   "private": true,
@@ -30,9 +30,11 @@
     "@types/lodash": "^4.14.149",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^25.2.0",
+    "cz-conventional-changelog": "3.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "git-describe": "^4.0.4",
+    "husky": "^4.2.5",
     "jest": "^25.1.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
@@ -55,5 +57,15 @@
       "master"
     ],
     "ci": false
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   }
 }
