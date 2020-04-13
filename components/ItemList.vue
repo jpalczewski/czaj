@@ -1,8 +1,20 @@
 <template>
   <section class="container column">
-    <p :key="item.name" class="notification" v-for="item in items">
-      <strong>{{item.id}}.{{item.name}}</strong> - <i>{{item.description}}</i>
-      <nuxt-link :to="{name: 'print-single', params: {item : item}}">Print</nuxt-link>
+    <p class="notification" v-for="item in items" :key="item.id">
+      <span class="is-left" id="des">
+        <strong>{{item.id}}.{{item.name}}</strong> - <i>{{item.description}}</i>
+      </span>
+
+      <span class="is-right" id="buttons">
+        <nuxt-link :to="{name: 'print-single', params: {item : item}}">
+          <button class="button">
+          <b-icon icon="printer"></b-icon>
+          </button>
+        </nuxt-link>
+        <button class="button" @click="removeByUUID(item.id)">
+        <b-icon icon="delete"></b-icon>
+      </button>
+      </span>
     </p>
   </section>
 </template>
@@ -19,9 +31,22 @@
       console.log(this)
       return this.ds ? this.ds.items : []
     }
+
+    removeByUUID (val:string) {
+      if(this.ds)
+      {
+        this.ds.deleteItem(val)
+      }
+      else
+      {
+        console.error("item store is null");
+      }
+    }
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  #buttons {
+    float: right;
+  }
 </style>

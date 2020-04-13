@@ -10,13 +10,22 @@ export default class ItemStore extends VuexModule implements IItemStore {
   items: IItem[] = []
 
   @Mutation
-  async addItem(item: IItem) {
+  addItem(item: IItem) {
     this.items.push(item)
+  }
+
+  @Mutation
+  deleteItem(uuid:  string) {
+    const results: number = this.items.findIndex(((value, index, obj) => value.id == uuid))
+    if (results!= -1)
+    {
+      this.items.splice(results, 1)
+    }
   }
 
 
   @Action
   async getItems(): Promise<IItem[]> {
-    return  this.items
+    return this.items
   }
 }
