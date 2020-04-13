@@ -2,7 +2,7 @@
   <section class="container column">
     <div class="notification" v-for="item in items" :key="item.id">
       <div class="is-left" id="des">
-        <strong>{{item.id}}.{{item.name}}</strong> - <i>{{item.description}}</i>
+        <strong>{{item.name}}</strong> - <i>{{item.description}}</i>
       </div>
 
       <div class="is-right" id="buttons">
