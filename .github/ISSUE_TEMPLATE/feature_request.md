@@ -1,11 +1,12 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ""
+title: "[feat]"
 labels: "⛑️needs triage, \U0001F4A1ideas, \U0001F4C8enhancement"
 assignees: ''
 
 ---
+
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Detailed Description
@@ -20,4 +21,3 @@ assignees: ''
 
 ## Describe alternatives you've considered
 <!--- A clear and concise description of any alternative solutions or features you've considered. -->
-
