@@ -9,6 +9,7 @@ export interface IItemStore {
 export interface IItem {
   id?: String
   name: String
-  description?: String
+  description?: String,
+  parent?: IItem
   timeCreated: Date
 }
