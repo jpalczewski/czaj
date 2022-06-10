@@ -43,7 +43,7 @@
     "pug": "2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
-    "semantic-release": "^17.0.4",
+    "semantic-release": "^19.0.3",
     "ts-jest": "^25.2.1",
     "vue-jest": "^4.0.0-0",
     "vue-uuid": "^1.1.1"
